@@ -30,10 +30,7 @@ _start:
 2:	
 
 3:
-	wfi
-	j	3b
-
-    # Control registers, set the stack, mstatus, mepc,
+	# Control registers, set the stack, mstatus, mepc,
     # and mtvec to return to the main function.
     # li		t5, 0xffff;
     # csrw	medeleg, t5

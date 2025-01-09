@@ -5,9 +5,12 @@ pub use uart::Uart;
 
 #[unsafe(no_mangle)]
 pub extern "C" fn kmain() {
-	let uart = Uart::init(0x1000_0000);
+    let mut uart = Uart::init(0x1000_0000);
+    uart.speak_full("test!");
 
     println!("testing!");
+
+    loop {}
 }
 
 struct Mmio {
