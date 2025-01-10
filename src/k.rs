@@ -1,8 +1,6 @@
                     use crate::*;
 mod uart;           use uart::*;
 
-pub use uart::Uart;
-
 #[unsafe(no_mangle)]
 pub extern "C" fn kmain() {
     let mut uart = Uart::init(0x1000_0000);
