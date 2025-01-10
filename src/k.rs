@@ -1,5 +1,5 @@
                     use crate::*;
-mod uart;           use uart::*;
+mod uart;       pub use uart::*;
 
 #[unsafe(no_mangle)]
 pub extern "C" fn kmain() {
